@@ -5,30 +5,54 @@
     <title>Laurence Delcassé</title>
     <!--fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'accueil/style.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'accueil/js/index.js' %}"></script>
   </head>
   <body>
     <header>
       <div class="">
-        <h1>Laurence Delcassé</br>Graphiste</h1>
+        <h1>Laurence Delcassé Graphiste</h1>
       </div>
     </header>
     <main>
-      <div class="flayer section">
-        <h2>Flayer</h2>
-        <p>Rendez vos flayer plus percutant. Redonnez envie de lire vos publications.</p>
+      <div id="flyer" class="section">
+        <div class="center opacity-scroll-magic">
+          <h2>flyer</h2>
+          <p>Rendez vos flayer plus percutant. Redonnez envie de lire vos publications.</p>
+        </div>
       </div>
-      <div class="cathalogue section">
-        <h2>Une revue qui vous ressemble</h2>
-        <p>Besoin d'attier vos lecteurs ? Je réalise pour vous tout type des mis en pages et toujours addapté au mieux a votre public.</p>
+      <div id="catalogue" class="section">
+        <div class="center opacity-scroll-magic">
+          <h2>Une revue qui vous ressemble</h2>
+          <p>Besoin d'attier vos lecteurs ? Je réalise pour vous tout type des mis en pages.Vos revues et catalogues addapté au mieux a votre public.</p>
+        </div>
+        <div id="cataloges_images" class="w">
+          <div class="cadre-1">
+            <img class="img_catalogue" src="{% static "accueil/images/catalogue_chasse_lapin.webp" %}" alt="catalogue_1">
+          </div>
+          <div class="cadre-1">
+            <img class="img_catalogue" src="{% static "accueil/images/catalogue_chasse_faisan.webp" %}" alt="catalogue_2">
+          </div>
+          <div class="cadre-1">
+            <img class="img_catalogue" src="{% static "accueil/images/catalogue_laporte.webp" %}" alt="catalogue_3">
+          </div>
+          <div class="cadre-1">
+            <img class="img_catalogue" src="{% static "accueil/images/catalogue_chef.webp" %}" alt="catalogue_4">
+          </div>
+          <div class="cadre-1">
+            <img class="img_catalogue" src="{% static "accueil/images/catalogue_chef2.webp" %}" alt="catalogue_5">
+          </div>
+        </div>
       </div>
-      <div class="logo section">
-        <h2>Elaborez un logos a votre image</h2>
-        <p>Soyez facilement identifiable grace a votre logo personalisé.</p>
+      <div id="logo" class="section">
+        <div class="center opacity-scroll-magic">
+          <h2>Elaborez un logo à votre image</h2>
+          <p>Soyez plus facilement identifiable grace a votre logo personalisé.</p>
+        </div>
       </div>
     </main>
-
   </body>
 </html>

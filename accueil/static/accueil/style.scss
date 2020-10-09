@@ -7,11 +7,11 @@ body {
 
 main, header, footer{
   div {
-    padding: 1em;
+    padding: 1em 0;
   }
 }
 header {
-  background-color: #fdb497;
+  background-color: $bg_header;
   padding: 3vw 3%;
   @include lg {
     padding: 0 20% 3vw 20%;
@@ -19,7 +19,8 @@ header {
 }
 h1 {
   margin: 0;
-  color: white;//$color-primary-1;
+  color: $color_header;//$color-primary-1;
+
 }
 h1, h2 {
   // font-family: 'Open Sans Condensed', sans-serif;
@@ -35,24 +36,11 @@ h1, h2 {
 }
 .section {
   min-height: 80vh;
-  padding: 13vw 3%;
-  @include md {
-    padding: 5vw 3%;
-  }
-  @include lg {
-    padding: 3vw 20%;
-  }
-  &.flayer {
-    background-color: $rgba-secondary-1-1;
-    color: $rgba-secondary-1-3;
-  }
-  &.cathalogue {
-    background-color: $rgba-secondary-2-1;
-    color: $rgba-secondary-2-3;
-  }
-  &.logo {
-    background-color: $rgba-complement-1;
-    color: $rgba-complement-3;
+  .center {
+    width: 100%;
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 20px;
   }
   p {
     font-size: 18px;
@@ -62,5 +50,34 @@ h1, h2 {
     @include lg {
       font-size: 50px;
     }
+  }
+  &#flyer {
+    background-color: $bg_section_1;
+    color: $color_section_1;
+  }
+  &#catalogue {
+    background-color: $bg_section_2;
+    color: $color_section_2;
+  }
+  &#logo {
+    background-color: $bg_section_3;
+    color: $color_section_3;
+  }
+}
+
+.w{
+  width: 100vw;
+  margin: 300px auto;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.cadre-1 {
+  background-color: white;
+  padding: 0.5vw;
+  max-width: 13vw;
+  .img_catalogue {
+    max-width: 13vw;
   }
 }
