@@ -6,53 +6,83 @@
     <!--fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'accueil/base.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'accueil/style.css' %}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{% static 'accueil/js/index.js' %}"></script>
   </head>
   <body>
     <header>
-      <div class="">
+      <div class="header">
         <h1>Laurence Delcassé Graphiste</h1>
       </div>
+      <nav class="navbar">
+        <ul>
+          <li class="navlink catalogue-nav"><a href="#catalogue">catalogue</a></li>
+          <li class="navlink affiche-nav"><a href="#affiche">affiche</a></li>
+          <li class="navlink maquette-nav"><a href="#maquette">maquette</a></li>
+          <li class="navlink flyer-nav"><a href="#flyer">flyer</a></li>
+          <li class="navlink logo-nav"><a href="#logo">logo</a></li>
+          <li class="navlink contact-nav"><a href="#contact">contact</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-      <div id="flyer" class="section">
-        <div class="center opacity-scroll-magic">
-          <h2>flyer</h2>
-          <p>Rendez vos flayer plus percutant. Redonnez envie de lire vos publications.</p>
-        </div>
-      </div>
+      <!-- <div class="gecko">
+        <img title="gecko" class="gecko" src="{% static "accueil/images/carre.png" %}" alt="gecko">
+      </div> -->
       <div id="catalogue" class="section">
         <div class="center opacity-scroll-magic">
           <h2>Une revue qui vous ressemble</h2>
-          <p>Besoin d'attier vos lecteurs ? Je réalise pour vous tout type des mis en pages.Vos revues et catalogues addapté au mieux a votre public.</p>
+          <p>Besoin d'attirer vos lecteurs ? Je réalise pour vous tout type de mise en page.Vos revues et catalogues adaptés au mieux à votre public.</p>
         </div>
         <div id="cataloges_images" class="w">
           <div class="cadre-1">
-            <img class="img_catalogue" src="{% static "accueil/images/catalogue_chasse_lapin.webp" %}" alt="catalogue_1">
+            <img title="catalogue-lapin" class="img_catalogue" src="{% static "accueil/images/catalogue_chasse_lapin.jpg" %}" alt="catalogue_1">
+            <img title="catalogue-faisan" class="img_catalogue" src="{% static "accueil/images/catalogue_chasse_faisan.jpg" %}" alt="catalogue_2">
           </div>
           <div class="cadre-1">
-            <img class="img_catalogue" src="{% static "accueil/images/catalogue_chasse_faisan.webp" %}" alt="catalogue_2">
+              <img title="catalogue-laporte" class="img_catalogue" src="{% static "accueil/images/catalogue_laporte.jpg" %}" alt="catalogue_3">
           </div>
           <div class="cadre-1">
-            <img class="img_catalogue" src="{% static "accueil/images/catalogue_laporte.webp" %}" alt="catalogue_3">
+            <img title="catalogue-chef" class="img_catalogue" src="{% static "accueil/images/catalogue_chef.jpg" %}" alt="catalogue_4">
+            <img title="catalogue-chef2" class="img_catalogue" src="{% static "accueil/images/catalogue_chef2.jpg" %}" alt="catalogue_5">
           </div>
-          <div class="cadre-1">
-            <img class="img_catalogue" src="{% static "accueil/images/catalogue_chef.webp" %}" alt="catalogue_4">
-          </div>
-          <div class="cadre-1">
-            <img class="img_catalogue" src="{% static "accueil/images/catalogue_chef2.webp" %}" alt="catalogue_5">
-          </div>
+        </div>
+      </div>
+      <div id="affiche" class="section">
+        <div class="center opacity-scroll-magic">
+          <h2>Affiche</h2>
+          <p>affiche</p>
+        </div>
+      </div>
+      <div id="maquette" class="section">
+        <div class="center opacity-scroll-magic">
+          <h2>maquette</h2>
+          <p>création execution de vos maquettes</p>
+        </div>
+      </div>
+      <div id="flyer" class="section">
+        <div class="center opacity-scroll-magic">
+          <h2>flyer</h2>
+          <p>Rendez vos flyers plus percutants. Maximisez votre impact. Redonnez envie de lire vos publications.</p>
         </div>
       </div>
       <div id="logo" class="section">
         <div class="center opacity-scroll-magic">
           <h2>Elaborez un logo à votre image</h2>
-          <p>Soyez plus facilement identifiable grace a votre logo personalisé.</p>
+          <p>Soyez plus facilement identifiable gr&acircce à votre logo personnalisé.</p>
         </div>
       </div>
+      <footer id="contact" class="footer">
+        <a class="icon" href="mailto:ramque@orange.fr?suject=Demande%20de%20devis">
+          <i class="material-icons">email</i>
+          <br/>
+          Contact
+        </a>
+      </footer>
     </main>
   </body>
 </html>

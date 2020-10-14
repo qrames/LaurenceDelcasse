@@ -1,0 +1,57 @@
+@import 'color';
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  ul {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    list-style: none;
+    li {
+      text-align: center;
+      a {
+        text-decoration: none;
+        font-size: 2em;
+      }
+    }
+    .catalogue-nav {
+      background-color: $bg_section_2;
+      a {
+        color: $color_section_2;
+      }
+    }
+    .affiche-nav {
+      background-color: $bg_section_4;
+      a {
+        color: $color_section_4;
+      }
+    }
+    .maquette-nav {
+      background-color: $bg_section_5;
+      a {
+        color: $color_section_5;
+      }
+    }
+    .flyer-nav {
+      background-color: $bg_section_1;
+      a {
+        color: $color_section_1;
+      }
+    }
+    .logo-nav {
+      background-color: $bg_section_3;
+      a {
+        color: $color_section_3;
+      }
+    }
+    .contact-nav {
+      background-color: $bg_section_6;
+      a {
+        color: $color_section_6;
+      }
+    }
+  }
+}
