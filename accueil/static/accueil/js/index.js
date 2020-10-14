@@ -1,13 +1,16 @@
 
 $( document ).ready(function() {
 
-	var $cataloges_images_top = $('#cataloges_images').offset().top;
 	var $document = $(document);
 	var $window = $(window);
+
+
 	var $opacityScrollStartValues = [];
 	var $opacityScrollStopValues = [];
 	var $startEffectOpacity = 100;
 	var $heightEffectOpacity = 600;
+
+	// init opacity-scroll-magic function
 	$('.opacity-scroll-magic').each(function(index){
 		$opacityScrollStartValues.push(
 			($(this).offset().top + $startEffectOpacity)
@@ -16,23 +19,31 @@ $( document ).ready(function() {
 			($(this).offset().top + $heightEffectOpacity + $startEffectOpacity)
 		);
 	});
+
 	$document.scroll(function() {
 
 		var $scrollBottom = $window.scrollTop() + $window.height();
 
-		// Catalogue images :
-		if ( $scrollBottom - $cataloges_images_top + 100 > 0){
+		var heightEffect = 400;
+		$('.w').each(function(index){
+			//scroll image effect
+			var $this_images_top = $(this).offset().top;
 
-			var $margin_top = 300 - ($scrollBottom - $cataloges_images_top)/1.7;
-			if ($margin_top >= 0) {
-				$('#cataloges_images').css("margin-top", $margin_top)
+			if ( $scrollBottom - $this_images_top + 100 > 0){
+
+				var $margin_top = heightEffect - ($scrollBottom - $this_images_top)/2;
+				if ($margin_top >= 0) {
+					$(this).css("margin-top", $margin_top)
+				}
+
+				var $width = (100 - 20*($scrollBottom - $this_images_top)/heightEffect)
+				if ($width > 75){
+					$(this).css("width", $width + "vw")
+				}
 			}
 
-			var $width = (100 - 20*($scrollBottom - $cataloges_images_top)/300)
-			if ($width > 75){
-				$('#cataloges_images').css("width", $width + "vw")
-			}
-		}
+		});
+
 
 		// h2 and p opacity
 		$('.opacity-scroll-magic').each(function(index){
