@@ -9,7 +9,7 @@ html, body {
     overflow-x: hidden;
 }
 main, header, footer{
-  div {
+  > div {
     padding: 1em 0;
   }
 }
@@ -19,6 +19,20 @@ header {
   @include lg {
     padding: 0 20% 3vw 20%;
   }
+  z-index: 2;
+}
+main {
+  position: absolute;
+  z-index: 1;
+}
+footer {
+  position: fixed;
+  z-index: 0;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  padding-top: 150px;
+
 }
 h1 {
   margin: 0;
@@ -52,10 +66,10 @@ h1, h2 {
     font-family: Recoleta, Georgia,"Times New Roman",Times,serif;
     font-size: 18px;
     @include sm {
-      font-size: 5vw;
+      font-size: 4vw;
     }
     @include lg {
-      font-size: 50px;
+      font-size: 40px;
     }
   }
   &#flyer {
@@ -83,6 +97,11 @@ h1, h2 {
 #contact {
   background-color: $bg_section_6;
   color: $color_section_6;
+}
+.vide-footer {
+  //for fixe footer effect
+  height:100vh;
+  width: 1px;
 }
 
 .icon {
@@ -114,9 +133,11 @@ h1, h2 {
   padding: 0.5vw;
   max-width: 24vw;
   // min-width: 500px;
+  position: relative;
   .img_catalogue {
     max-width: 24vw;
     // min-width: 500px;
     margin-top: 5rem;
+    box-shadow: 4px 4px 20px rgba(0,0,0,.25);
   }
 }

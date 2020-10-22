@@ -40,6 +40,11 @@ $( document ).ready(function() {
 				if ($width > 75){
 					$(this).css("width", $width + "vw")
 				}
+
+				var opacity = ($scrollBottom - $this_images_top)/heightEffect
+				if (0 < opacity <= 1){
+					$(this).css("opacity", opacity )
+				}
 			}
 
 		});
