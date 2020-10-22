@@ -20,6 +20,10 @@ $( document ).ready(function() {
 		);
 	});
 
+	function tranform3d(x,y,z){
+		return 'translate3d(' + x + 'px, '+ y +'px, '+  z +'px)'
+	}
+
 	$document.scroll(function() {
 
 		var $scrollBottom = $window.scrollTop() + $window.height();
@@ -33,12 +37,13 @@ $( document ).ready(function() {
 
 				var $margin_top = heightEffect - ($scrollBottom - $this_images_top)/2;
 				if ($margin_top >= 0) {
-					$(this).css("margin-top", $margin_top)
+					// $(this).css("margin-top", $margin_top)
+					$(this).children(1).css("transform", tranform3d(-100,100,0))
 				}
 
 				var $width = (100 - 20*($scrollBottom - $this_images_top)/heightEffect)
 				if ($width > 75){
-					$(this).css("width", $width + "vw")
+					// $(this).css("width", $width + "vw")
 				}
 
 				var opacity = ($scrollBottom - $this_images_top)/heightEffect
