@@ -1,22 +1,28 @@
 //https://www.colortools.net/color_complementary.html
 
-$color_header: #fdb497;
-$bg_header: #F0FFFF;
+$color-primary-0: #AF727E;	// Main Primary color */
+$color-primary-1: #F6D6DC;
+$color-primary-2: #DBA6B0;
+$color-primary-3: #88505B;
+$color-primary-4: #592D36;
 
-$color_section_2: #e64939;
-$bg_section_2: #151515;
+$color_header: $color-primary-1;
+$bg_header: $color-primary-4;
 
-$color_section_4: #b3e0e1;
-$bg_section_4: #252525;
+$color_section_1: $color-primary-0;
+$bg_section_1: $color-primary-1;
 
-$color_section_5: #6b6db5;
-$bg_section_5: #f1db81;
+$color_section_2: $color-primary-1;
+$bg_section_2: $color-primary-3;
 
-$color_section_1: #2c3e68;
-$bg_section_1: #EEEEEE;
+$color_section_3: $color-primary-2;
+$bg_section_3: $color-primary-4;
 
-$color_section_3: #ffc300;
-$bg_section_3: #EEE;
+$color_section_4: $color-primary-1;
+$bg_section_4: $color-primary-3;
+
+$color_section_5: $color-primary-0;
+$bg_section_5: $color-primary-1;
 
 $color_section_6: white;
 $bg_section_6: #27282a;

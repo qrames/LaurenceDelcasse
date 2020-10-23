@@ -18,33 +18,33 @@
       }
     }
     .catalogue-nav {
-      background-color: $bg_section_2;
-      a {
-        color: $color_section_2;
-      }
-    }
-    .affiche-nav {
-      background-color: $bg_section_4;
-      a {
-        color: $color_section_4;
-      }
-    }
-    .maquette-nav {
-      background-color: $bg_section_5;
-      a {
-        color: $color_section_5;
-      }
-    }
-    .flyer-nav {
       background-color: $bg_section_1;
       a {
         color: $color_section_1;
       }
     }
-    .logo-nav {
+    .affiche-nav {
+      background-color: $bg_section_2;
+      a {
+        color: $color_section_2;
+      }
+    }
+    .maquette-nav {
       background-color: $bg_section_3;
       a {
         color: $color_section_3;
+      }
+    }
+    .flyer-nav {
+      background-color: $bg_section_4;
+      a {
+        color: $color_section_4;
+      }
+    }
+    .logo-nav {
+      background-color: $bg_section_5;
+      a {
+        color: $color_section_5;
       }
     }
     .contact-nav {

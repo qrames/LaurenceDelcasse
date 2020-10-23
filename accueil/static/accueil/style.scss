@@ -9,6 +9,7 @@ html, body {
     overflow-x: hidden;
 }
 main, header, footer{
+  top: 0;
   > div {
     padding: 1em 0;
     width: 100vw;
@@ -34,8 +35,17 @@ footer {
   padding-top: 150px;
 
 }
+.header{
+  height: 30vw;
+  background: $bg_header;
+  color: $color_header;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 50vh;
+}
 h1 {
   margin: 0;
+  padding: 2rem 0;
   color: $color_header;//$color-primary-1;
 
 }
@@ -72,23 +82,23 @@ h1, h2 {
       font-size: 40px;
     }
   }
-  &#flyer {
+  &#catalogue {
     background-color: $bg_section_1;
     color: $color_section_1;
   }
-  &#catalogue {
+  &#affiche {
     background-color: $bg_section_2;
     color: $color_section_2;
   }
-  &#logo {
+  &#maquette {
     background-color: $bg_section_3;
     color: $color_section_3;
   }
-  &#affiche {
+  &#flyer {
     background-color: $bg_section_4;
     color: $color_section_4;
   }
-  &#maquette {
+  &#logo {
     background-color: $bg_section_5;
     color: $color_section_5;
   }
@@ -115,11 +125,6 @@ h1, h2 {
   }
 }
 
-.header{
-  height: 30vw;
-  background: $bg_header;
-  color: $color_header;
-}
 
 .opacity-scroll-magic {
   will-change: opacity;
