@@ -15,7 +15,6 @@ main, header, footer{
   }
 }
 header {
-  background-color: $bg_header;
   padding: 3vw 3%;
   @include lg {
     padding: 0 20% 3vw 20%;
@@ -118,6 +117,8 @@ h1, h2 {
 
 .header{
   height: 30vw;
+  background: $bg_header;
+  color: $color_header;
 }
 
 .opacity-scroll-magic {
@@ -133,6 +134,7 @@ h1, h2 {
   grid-row-gap: 105px;
   width: 100vw;
   max-width: 1600px;
+  height: 1300px;
   margin: 0 auto;
   grid-column-gap: 1vw;
   grid-template-columns: repeat(5,1fr);
@@ -140,9 +142,24 @@ h1, h2 {
 .cadre {
   background-color: #FFF0;
   .img_catalogue {
-    max-width: 16vw;
+    max-width: 250px;
     // min-width: 500px;
     margin-top: 5rem;
-    box-shadow: 4px 4px 20px rgba(0,0,0,.25);
+    box-shadow: 4px 4px 20px rgba(0,0,0,0.5);
   }
+}
+.cadre-1 {
+  padding-top: 3.5vw;
+}
+.cadre-2 {
+  padding-top: 1vw;
+}
+.cadre-3 {
+  padding-top: 6vw;
+}
+.cadre-4 {
+  padding-top: 0.5vw;
+}
+.cadre-5 {
+  padding-top: 10vw;
 }

@@ -20,8 +20,34 @@ $( document ).ready(function() {
 		);
 	});
 
-	function tranform3d(x,y,z){
-		return 'translate3d(' + x + 'px, '+ y +'px, '+  z +'px)'
+	function tranform3d([x,y,z]){
+		return 'translate3d( ' + x + 'px, '+ y +'px, '+  z +'px)'
+	}
+
+	function xyzScroll(pos, scroll){
+		var x = ((scroll <= 0.8) ? 200*(0.8 -scroll): 0);
+		var y = 200;
+		var z = 0;
+		console.log(scroll);
+		switch (pos){
+			case 1:
+
+				return [-x,y*scroll,z];
+			case 2:
+
+				return [-x/2,1.3*y*scroll,z];
+			case 3:
+
+				return [0,y*scroll,z];
+			case 4:
+
+				return [x/2,1.3*y*scroll,z];
+			case 5:
+
+				return [x,y*scroll,z];
+			default:
+				return [0,0,0];
+		}
 	}
 
 	$document.scroll(function() {
@@ -35,10 +61,14 @@ $( document ).ready(function() {
 
 			if ( $scrollBottom - $this_images_top + 100 > 0){
 
-				var $margin_top = heightEffect - ($scrollBottom - $this_images_top)/2;
-				if ($margin_top >= 0) {
-					// $(this).css("margin-top", $margin_top)
-					$(this).children(1).css("transform", tranform3d(-100,100,0))
+				var effect = ($scrollBottom - $this_images_top)/window.innerHeight;
+				if (effect >= 0) {
+					// $(this).css("margin-top", effect)
+					$(this).children(".cadre-1").css("transform", tranform3d(xyzScroll(1,effect)))
+					$(this).children(".cadre-2").css("transform", tranform3d(xyzScroll(2,effect)))
+					$(this).children(".cadre-3").css("transform", tranform3d(xyzScroll(3,effect)))
+					$(this).children(".cadre-4").css("transform", tranform3d(xyzScroll(4,effect)))
+					$(this).children(".cadre-5").css("transform", tranform3d(xyzScroll(5,effect)))
 				}
 
 				var $width = (100 - 20*($scrollBottom - $this_images_top)/heightEffect)
