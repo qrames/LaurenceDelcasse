@@ -29,6 +29,7 @@
     <main>
       <div class="header" style="background-image: url({% static "accueil/images/carre.png" %})">
         <h1>Laurence Delcassé Graphiste</h1>
+        <p>Bienvenues dans mon atelier d'édition graphique.</p>
       </div>
       <div id="catalogue" class="section">
         <div class="center opacity-scroll-magic">
@@ -58,7 +59,7 @@
           <h2>Affiche</h2>
           <p>affiche</p>
         </div>
-        <div id="affiche_images" class="w">
+        <div id="affiche_images" class="w w2">
           <div class="cadre cadre-1">
             <img title="affiche-livre" class="img_catalogue" src="{% static "accueil/images/affiche-livre.jpg" %}" alt="affiche-livre">
             <img title="affiche-Louis" class="img_catalogue" src="{% static "accueil/images/affiche-Louis.jpg" %}" alt="affiche-Louis">
@@ -100,12 +101,44 @@
       <div class="vide-footer"></div>
     </main>
     <footer id="contact" class="footer">
-      <div class="">
+      <div class="center">
         <a class="icon" href="mailto:ramque@orange.fr?suject=Demande%20de%20devis">
           <i class="material-icons">email</i>
           <br/>
-          CONTACT
+          EMAIL DIRECT
         </a>
+        <a class="icon" href="tel:0680935805">
+          <i class="material-icons">phone</i>
+          <br/>
+          TEL
+        </a>
+      </div>
+      <div class="center">
+        <form action="" method="post">
+          {% csrf_token %}
+          {{ form.non_field_errors }}
+          <div class="fieldWrapper">
+              {{ form.subject.errors }}
+              <label for="{{ form.subject.id_for_label }}">SUJET</label>
+              {{ form.subject }}
+          </div>
+          <div class="fieldWrapper">
+              {{ form.message.errors }}
+              <label for="{{ form.message.id_for_label }}">MESSAGE</label>
+              {{ form.message }}
+          </div>
+          <div class="fieldWrapper">
+              {{ form.sender.errors }}
+              <label for="{{ form.sender.id_for_label }}">Votre addresse email:</label>
+              {{ form.sender }}
+          </div>
+          <div class="fieldWrapper">
+              {{ form.cc_myself.errors }}
+              <label class="checkbox" for="{{ form.cc_myself.id_for_label }}">CC (désirez vous recevoir une copie ?)</label>
+              {{ form.cc_myself }}
+          </div>
+          <input type="submit" value="Envoyer">
+        </form>
       </div>
     </footer>
   </body>
