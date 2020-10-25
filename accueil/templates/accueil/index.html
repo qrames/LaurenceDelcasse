@@ -6,7 +6,7 @@
     <!--fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'accueil/base.css' %}">
@@ -30,7 +30,7 @@
     <main>
       <div class="header" style="background-image: url({% static "accueil/images/carre.png" %})">
         <h1>Laurence Delcassé Graphiste</h1>
-        <p>Bienvenues dans mon atelier d'édition graphique.</p>
+        <p>Bienvenues dans mon atelier d'édition graphique</p>
       </div>
       <div id="catalogue" class="section">
         <div class="center opacity-scroll-magic">
@@ -102,16 +102,26 @@
       <div class="vide-footer"></div>
     </main>
     <footer id="contact" class="footer">
-      <div class="center">
-        <a class="icon" href="mailto:ramque@orange.fr?suject=Demande%20de%20devis">
+      <div class="center rowsContact">
+        <a class="icon" href="mailto:laurence.delcasse@orange.fr?suject=WEB_Contact">
           <i class="material-icons">email</i>
           <br/>
           EMAIL DIRECT
         </a>
-        <a class="icon" href="tel:0680935805">
+        <a class="icon" href="tel:0688587524">
           <i class="material-icons">phone</i>
           <br/>
-          TEL
+          Telephone
+        </a>
+        <a class="icon" href="">
+          <i class="material-icons">facebook</i>
+          <br/>
+          Facebook
+        </a>
+        <a class="icon" href="">
+          <i class="material-icons">picture_as_pdf</i>
+          <br/>
+          CV
         </a>
       </div>
       <div class="center">
@@ -130,7 +140,7 @@
           </div>
           <div class="fieldWrapper">
               {{ form.sender.errors }}
-              <label for="{{ form.sender.id_for_label }}">Votre addresse email:</label>
+              <label for="{{ form.sender.id_for_label }}">Votre addresse email :</label>
               {{ form.sender }}
           </div>
           <div class="fieldWrapper">
