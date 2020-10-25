@@ -10,15 +10,22 @@ $( document ).ready(function() {
 	var $startEffectOpacity = 100;
 	var $heightEffectOpacity = 600;
 
-	// init opacity-scroll-magic function
-	$('.opacity-scroll-magic').each(function(index){
-		$opacityScrollStartValues.push(
-			($(this).offset().top + $startEffectOpacity)
-		);
-		$opacityScrollStopValues.push(
-			($(this).offset().top + $heightEffectOpacity + $startEffectOpacity)
-		);
-	});
+	function arrayOpacityScroll(){
+		$opacityScrollStartValues = [];
+		$opacityScrollStopValues = [];
+		// init opacity-scroll-magic function
+		$('.opacity-scroll-magic').each(function(index){
+			$opacityScrollStartValues.push(
+				($(this).offset().top + $startEffectOpacity)
+			);
+			$opacityScrollStopValues.push(
+				($(this).offset().top + $heightEffectOpacity + $startEffectOpacity)
+			);
+		});
+
+	}
+	arrayOpacityScroll();
+	$window.resize(arrayOpacityScroll());
 
 	function tranform3d([x,y,z]){
 		return 'translate3d( ' + x + 'px, '+ y +'px, '+  z +'px)'
