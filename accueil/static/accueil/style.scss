@@ -48,9 +48,9 @@ footer {
     background-color: #0002;
     margin: 200px auto;
     text-align: center;
-    font-size: 5vw;
+    font-size: 4vw;
     @include lg {
-      font-size: 50px;
+      font-size: 40px;
     }
   }
 }
@@ -81,10 +81,10 @@ h1, h2 {
     font-family: 'Work Sans', sans-serif;
     font-size: 18px;
     @include sm {
-      font-size: 4vw;
+      font-size: 3vw;
     }
     @include lg {
-      font-size: 40px;
+      font-size: 30px;
     }
   }
   &#catalogue {
