@@ -1,4 +1,4 @@
 *.css
 *.css.map
 *.pyc
-passwords.py
+email_settings.py
