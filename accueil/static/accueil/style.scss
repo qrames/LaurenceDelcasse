@@ -11,8 +11,9 @@ html, body {
 main, header, footer{
   top: 0;
   > div {
-    padding: 1em 0;
     width: 100vw;
+    position: relative;
+    overflow:  hidden!important;
   }
 }
 header {
@@ -34,7 +35,9 @@ footer {
   height: 100vh;
   top: 0;
   padding-top: 20px;
-
+}
+div, p, h1, h2 {
+  hyphens: none;
 }
 .header{
   height: 30vw;
@@ -70,10 +73,9 @@ h1, h2 {
   }
 }
 .center {
-  width: 100%;
+  width: 80%;
   max-width: 1040px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 .section {
   min-height: 120vh;
@@ -108,6 +110,12 @@ h1, h2 {
     color: $color_section_5;
   }
 }
+input {
+  width: 90%;
+  &[type=checkbox] {
+    width: 5%;
+  }
+}
 label {
   display: block;
   line-height: 3em;
@@ -125,7 +133,7 @@ textarea {
 }
 .vide-footer {
   //for fixe footer effect
-  height:95vh;
+  height:98vh;
   width: 1px;
 }
 
@@ -142,19 +150,16 @@ textarea {
     font-size: 40px;
   }
   >i{
-    font-size: 100px;
+    font-size: 50px;
     @include lg {
-      font-size: 150px;
+      font-size: 100px;
     }
 
   }
 }
 .rowsContact {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
-  @include sm {
-    grid-template-columns: repeat(4,1fr);
-  }
+  grid-template-columns: repeat(4,1fr);
 }
 
 .opacity-scroll-magic {
